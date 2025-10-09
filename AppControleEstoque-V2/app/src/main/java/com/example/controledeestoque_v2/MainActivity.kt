@@ -19,9 +19,16 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ControleDeEstoqueV2Theme {
+                TelaPricipal();
 
             }
         }
     }
 }
+
+@Composable
+fun TelaPricipal(){
+    val produtos =
+}
+
 
