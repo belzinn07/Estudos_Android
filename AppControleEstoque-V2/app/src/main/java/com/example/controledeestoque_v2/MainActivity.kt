@@ -11,7 +11,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.controledeestoque_v2.ui.theme.ControleDeEstoqueV2Theme
+import com.example.controledeestoque_v2.viewmodel.ProdutoViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +29,12 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun TelaPricipal(){
-    val produtos =
+fun TelaPricipal(
+    viewModel: ProdutoViewModel = viewModel()
+
+){
+
+
 }
 
 

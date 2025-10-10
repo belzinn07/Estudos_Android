@@ -1,4 +1,4 @@
-package com.example.controledeestoque
+package com.example.controledeestoque.model
 
 enum class Categorias {
     ELETRONICOS,

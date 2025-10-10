@@ -1,4 +1,4 @@
-package com.example.controledeestoque
+package com.example.controledeestoque.model
 
 data class Produtos(
     val nome:String,

@@ -30,6 +30,8 @@ import androidx.compose.ui.unit.dp
 import com.example.controledeestoque.ui.theme.ControleDeEstoqueTheme
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
+import com.example.controledeestoque.model.Categorias
+import com.example.controledeestoque.model.Produtos
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -97,7 +99,7 @@ fun ControleDeEstoqueApp() {
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
-            items(Categorias.values()) { cat ->
+            items(Categorias.entries) { cat ->
                 Button(onClick = { categoria = cat }) {
                     Text(text = cat.name)
                 }
