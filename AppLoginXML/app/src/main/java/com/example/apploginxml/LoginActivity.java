@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -14,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class LoginActivity extends AppCompatActivity {
 
+    TextView textLogin;
     EditText editEmail, editSenha;
     Button btnEntrar;
 
@@ -24,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        textLogin = findViewById(R.id.textLogin);
         editEmail = findViewById(R.id.editEmail);
         editSenha = findViewById(R.id.editSenha);
         btnEntrar = findViewById(R.id.btnEntrar);
@@ -31,6 +34,10 @@ public class LoginActivity extends AppCompatActivity {
         btnEntrar.setOnClickListener(v->{
             String email = editEmail.getText().toString();
             String senha = editSenha.getText().toString();
+
+            if (email.isEmpty()|| senha.isEmpty()){
+                Toast.makeText(this, "Preencha todos os campos",Toast.LENGTH_SHORT).show();
+            }
 
             if(email.equals("admin") && senha.equals("0707")){
                 Toast.makeText(this, "Login feito com sucesso", Toast.LENGTH_SHORT).show();
